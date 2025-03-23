@@ -26,6 +26,12 @@ export default function Home() {
     fetchUsers();
   };
 
+  const handleUpdateUser = async (id) => {
+    const user = users.find((user) => user.id === id);
+    setNewUser(user);
+    await updateUser(id, user);
+    fetchUsers();
+  }
  const handleDeleteUser = async (id) => {
     await deleteUser(id);
     fetchUsers();
@@ -78,7 +84,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-2">
               <button
-                // onClick={() => handleUpdateUser(user.id)}
+                onClick={() => handleUpdateUser(user.id)}
                 className="border border-green-500 rounded-md py-2 px-3"
               >
                 Update
