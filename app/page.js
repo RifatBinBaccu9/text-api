@@ -34,6 +34,7 @@ export default function Home() {
 
   return (
     <div className="max-w-[1320px] mx-auto p-3 2xl:px-0">
+      <h1 className="text-3xl font-bold mb-8 text-center">User List: ({users.length})</h1>
       <div className="mb-8 max-w-[600px] mx-auto">
         <form onSubmit={handleCreateUser} className="flex flex-col gap-3 border p-6 rounded-lg">
           <input
