@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://67ca79c8102d684575c573a6.mockapi.io/api/test/user";
+const API_URL = "https://67dfe1a87635238f9aab92a0.mockapi.io/api/airango/order";
 
 export const getUsers = async () => {
   const response = await axios.get(API_URL);
